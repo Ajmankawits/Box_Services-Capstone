@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'customers',
     'orders',
     'shipments',
+    'paymenttier',
     
 ]
 
