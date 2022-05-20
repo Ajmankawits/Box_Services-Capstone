@@ -5,6 +5,6 @@ from .models import Order
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
-        fields = ['id', 'customer_id', 'order_date']
+        fields = ['id', 'user_id', 'order_date']
         depth = 1
-    customer_id = serializers.IntegerField(write_only=True)
+    user_id = serializers.IntegerField(write_only=True)
