@@ -5,12 +5,12 @@ from datetime import date
 
 
 class User(AbstractUser):
-    street = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    state = models.CharField(max_length=255)
-    zipcode = models.IntegerField(max_length=255)
+    street = models.CharField(max_length=255, default = None)
+    city = models.CharField(max_length=255, default = None)
+    state = models.CharField(max_length=255, default= None)
+    zipcode = models.IntegerField(default = None)
     member_since = models.DateField(default= date.today())
-    money_owed = models.DecimalField(max_digits=9, decimal_places=2)
+    money_owed = models.DecimalField(max_digits=9, decimal_places=2, default= None)
 
 
     '''
